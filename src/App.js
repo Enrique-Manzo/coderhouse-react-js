@@ -1,10 +1,16 @@
 import logo from './Assets/logo.png';
 import './App.css';
 import NavBar from './Components/NavBar';
+import ItemListContainer from './Components/ItemListContainer';
 
 function App() {
   return (
-    <NavBar companyName="test" companyLogo={logo} items={[{"name": "First item", "link": "www.proz.com"}, {"name": "Second item", "link": "www.facebook.com"}, {"name": "Third item", "link": "www.instagram.com"}]} />
+    <div>
+    <NavBar companyLogo={logo} items={[{"name": "home", "link": "/"},
+                                                          {"name": "collections", "link": "/collections"},
+                                                          {"name": "categories", "list": ["living room", "bedroom", "garden"]}]} />
+    <ItemListContainer greeting="Product List"/>
+    </div>
   );
 }
 
