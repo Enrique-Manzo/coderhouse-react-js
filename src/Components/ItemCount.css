@@ -1,0 +1,48 @@
+.purchase-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.counter {
+    border-radius: 50px;
+    height: 50px;
+    width: 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+.decrement, .increment {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.purchase-button {
+    background-color: #FD8F5F;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.4s linear;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.purchase-button p {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.stock {
+    font-size: 0.8rem;
+}

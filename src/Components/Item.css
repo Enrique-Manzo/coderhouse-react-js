@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
+.product-presentation {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.product-presentation img {
+    transition: 0.5s;
+}
+
+.product-presentation img:hover {
+    transform: scale(1.1);
+}
+
+.presentation-image {
+    width: 200px;
+    height: 252px;
+}
+
+h4, p {
+    font-family: "Nunito Sans", sans-serif;
+    color: #505050;
+}
+
+.presentation-description {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

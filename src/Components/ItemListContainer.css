@@ -1,4 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+
 .white-title {
     color: white;
     margin: 0;
+    font-family: "Libre Baskerville", sans-serif;
+}
+
+.section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    text-transform: uppercase;
+    font-family: "Nunito Sans", sans-serif;
+    color: #505050;
+}
+
+.section-title::before, .section-title::after {
+    content: "";
+    height: 2px;
+    width: 80px;
+    top: 50%;
+    background: #505050;
 }

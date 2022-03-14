@@ -5,12 +5,12 @@ import ItemListContainer from './Components/ItemListContainer';
 
 function App() {
   return (
-    <div>
+    <>
     <NavBar companyLogo={logo} items={[{"name": "home", "link": "/"},
                                                           {"name": "collections", "link": "/collections"},
                                                           {"name": "categories", "list": ["living room", "bedroom", "garden"]}]} />
-    <ItemListContainer greeting="Product List"/>
-    </div>
+    <ItemListContainer preTitle="New winter season items"/>
+    </>
   );
 }
 
