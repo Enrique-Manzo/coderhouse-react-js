@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/coderhouse-react-js/static/css/main.6a1f46d7.css",
-    "main.js": "/coderhouse-react-js/static/js/main.c08ceaa7.js",
+    "main.css": "/coderhouse-react-js/static/css/main.e9460dbe.css",
+    "main.js": "/coderhouse-react-js/static/js/main.0a25d788.js",
     "static/js/787.46493d11.chunk.js": "/coderhouse-react-js/static/js/787.46493d11.chunk.js",
     "static/media/logo.png": "/coderhouse-react-js/static/media/logo.00c640db7da67ca5fda7.png",
+    "static/media/lamp.webp": "/coderhouse-react-js/static/media/lamp.8b09a6f221942d7c5e4c.webp",
+    "static/media/lux-chair.webp": "/coderhouse-react-js/static/media/lux-chair.eb2258916cdc41575078.webp",
+    "static/media/standing-lamp.webp": "/coderhouse-react-js/static/media/standing-lamp.bc60d067f947ab2cdc66.webp",
+    "static/media/bedside-table.webp": "/coderhouse-react-js/static/media/bedside-table.c2c213db8cfc36374ffc.webp",
     "index.html": "/coderhouse-react-js/index.html",
-    "main.6a1f46d7.css.map": "/coderhouse-react-js/static/css/main.6a1f46d7.css.map",
-    "main.c08ceaa7.js.map": "/coderhouse-react-js/static/js/main.c08ceaa7.js.map",
+    "main.e9460dbe.css.map": "/coderhouse-react-js/static/css/main.e9460dbe.css.map",
+    "main.0a25d788.js.map": "/coderhouse-react-js/static/js/main.0a25d788.js.map",
     "787.46493d11.chunk.js.map": "/coderhouse-react-js/static/js/787.46493d11.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a1f46d7.css",
-    "static/js/main.c08ceaa7.js"
+    "static/css/main.e9460dbe.css",
+    "static/js/main.0a25d788.js"
   ]
 }
