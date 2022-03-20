@@ -28,7 +28,7 @@ export default function HomepageSlider ({content}) {
     const next = () => {
         Position == -200 ? (setPosition(position => position = 0)) : setPosition(position => position - 100)
     }
-    console.log(content)
+    
 
     return (
         <>

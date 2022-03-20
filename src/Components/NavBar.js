@@ -1,17 +1,44 @@
 import "./bootstrap.min.css";
-import "./NavBar.css"
-import CartWidget from "./CartWidget"
+import "./NavBar.css";
+import CartWidget from "./CartWidget";
 import { Link } from 'react-router-dom';
+import {useState, useEffect} from "react";
 
 function NavBar({companyLogo, items}) {
 
-    console.log(document.body.scrollTop)
+    let [Height, setHeight] = useState(100);
+    let [Top, setTop] = useState(40)
+    let [LogoWidth, setLogoWidth] = useState(10);
+
+    const changeHeight = () => {
+
+        document.documentElement.scrollTop > 40 && setHeight(height => height = 40)
+        document.documentElement.scrollTop < 40 && setHeight(height => height = 100)
+
+        document.documentElement.scrollTop > 40 && setTop(top => top = 20)
+        document.documentElement.scrollTop < 40 && setTop(top => top = 40)
+
+        document.documentElement.scrollTop > 40 && setLogoWidth(width => width = 5)
+        document.documentElement.scrollTop < 40 && setLogoWidth(width => width = 10)
+
+    }
+
+    useEffect(()=>{
+        document.addEventListener("scroll", changeHeight)
+
+        return () => {
+            document.removeEventListener("scroll", changeHeight)
+        }
+
+    }, [])
+    
+
     
     return (
-        <nav className="navbar navbar-expand-md">
+        <nav className="navbar navbar-expand-md" style={{"height": `${Height}px`}}>
             
-            <img className="logo-image" src={companyLogo} />
-                     
+            <img className="logo-image" src={companyLogo} style={{"top": `${Top}px`, "width": `${LogoWidth}%`}}/>
+           
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon">
                     <div className="navbar-toggler-icon-bar"></div>
@@ -23,28 +50,33 @@ function NavBar({companyLogo, items}) {
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <Link to={items[0].link}>
-                        <a className="nav-link">{items[0].name}</a>
+                        <p className="nav-link">{items[0].name}</p>
                         </Link>
                     </li>
                     <li className="nav-item">
-                        
-                        <a className="nav-link">{items[1].name}</a>
-                        
+                        <Link to={items[1].link}>
+                        <p className="nav-link">{items[1].name}</p>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {items[2].name}
-                        </a>
-                        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a className="dropdown-item" href="#">{items[2].list[0]}</a>
-                            <a className="dropdown-item" href="#">{items[2].list[1]}</a>
-                            <a className="dropdown-item" href="#">{items[2].list[2]}</a>
-                        </div>
+                        <Link to={items[2].link}>
+                        <p className="nav-link">{items[2].name}</p>
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to={items[3].link}>
+                        <p className="nav-link">{items[3].name}</p>
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to={items[4].link}>
+                        <p className="nav-link">{items[4].name}</p>
+                        </Link>
                     </li>
                 </ul>
                 <form className="form-inline my-2 my-lg-0">
                     <input className="form-control mr-sm-2" type="search" placeholder="Search products" aria-label="Search" />
-                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <button className="btn btn-outline-success my-2 my-sm-0 margin-right" type="submit">Search</button>
                 </form>
                 <CartWidget />
             </div>

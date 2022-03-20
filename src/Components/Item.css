@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
 
+a:hover {
+    text-decoration: none;
+}
+
 .product-presentation {
     width:250px;
     padding-top: 20px;
@@ -17,14 +21,15 @@
     transition: 0.5s;
 }
 
-.product-presentation img:hover {
-    transform: scale(1.1);
-}
-
 .presentation-image {
     width: 200px;
     height: 252px;
     padding-bottom: 10px;
+    object-fit: cover;
+}
+
+h4 {
+    margin: 0 auto;
 }
 
 h4, p {
@@ -32,9 +37,31 @@ h4, p {
     color: #505050;
 }
 
+.item-category {
+    color: #505050;
+    margin: 0;
+    font-family: "Libre Baskerville", sans-serif;
+}
+
 .presentation-description {
+    position: relative;
     margin-top: 5px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+}
+
+
+.price-tag-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.price-tag {
+    position: relative;
+    left: 0;
+    color: #FD8F5F;
+    font-weight: 800;
 }
