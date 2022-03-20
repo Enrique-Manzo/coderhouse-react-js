@@ -1,0 +1,90 @@
+[
+    {
+        "id": 1,
+        "title": "Decorative Vase", 
+        "category": "Decoration", 
+        "stock": 5, 
+        "price": 30.50, 
+        "imageURL": "../Assets/Product-images/lamp.webp"
+    },
+    {
+        "id": 2, 
+        "title": "Minimalist Bedside", 
+        "category": "Bedroom", 
+        "stock": 10, 
+        "price": 150, 
+        "imageURL": "../Assets/Product-images/bedside-table.webp"
+    },
+    {
+        "id": 3, 
+        "title": "Luxury Lamp", 
+        "category": "Lights", 
+        "stock": 8, 
+        "price": 60, 
+        "imageURL": "../Assets/Product-images/standing-lamp.webp"
+    },
+    {
+        "id": 4, 
+        "title": "Luxury Chair", 
+        "category": "Bedroom", 
+        "stock": 12, 
+        "price": 180, 
+        "imageURL": "../Assets/Product-images/lux-chair.webp"
+    },
+    {
+        "id": 5, 
+        "title": "Luxury Chair", 
+        "category": "Bedroom", 
+        "stock": 12, 
+        "price": 180, 
+        "imageURL": "../Assets/Product-images/lux-chair.webp"
+    },
+    {
+        "id": 6, 
+        "title": "Luxury Chair", 
+        "category": "Bedroom", 
+        "stock": 12, 
+        "price": 180, 
+        "imageURL": "../Assets/Product-images/lux-chair.webp"
+    },
+    {
+        "id": 7, 
+        "title": "Luxury Chair", 
+        "category": "Bedroom", 
+        "stock": 12, 
+        "price": 180, 
+        "imageURL": "../Assets/Product-images/lux-chair.webp"
+    },
+    {
+        "id": 8, 
+        "title": "Luxury Chair", 
+        "category": "Bedroom", 
+        "stock": 12, 
+        "price": 180, 
+        "imageURL": "../Assets/Product-images/lux-chair.webp"
+    },
+    {
+        "id": 9, 
+        "title": "Luxury Chair", 
+        "category": "Bedroom", 
+        "stock": 12, 
+        "price": 180, 
+        "imageURL": "../Assets/Product-images/lux-chair.webp"
+    },
+    {
+        "id": 10, 
+        "title": "Luxury Chair", 
+        "category": "Bedroom", 
+        "stock": 12, 
+        "price": 180, 
+        "imageURL": "../Assets/Product-images/lux-chair.webp"
+    },
+    {
+        "id": 11, 
+        "title": "Luxury Chair", 
+        "category": "Bedroom", 
+        "stock": 12, 
+        "price": 180, 
+        "imageURL": "../Assets/Product-images/lux-chair.webp"
+    }
+]

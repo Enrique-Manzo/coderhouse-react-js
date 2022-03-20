@@ -1,0 +1,38 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap');
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-detail-container {
+    margin-bottom: 25px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.pre-title {
+    color: #505050;
+    margin: 0;
+    font-family: "Libre Baskerville", sans-serif;
+}
+
+.section-title {
+    text-transform: uppercase;
+    font-family: "Nunito Sans", sans-serif;
+    color: #505050;
+}
+
+.section-title::before, .section-title::after {
+    content: "";
+    height: 2px;
+    width: 80px;
+    top: 50%;
+    background: #505050;
+}

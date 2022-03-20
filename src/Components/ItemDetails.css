@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap');
+
+.products-container {
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+}
+
+.product-details-image {
+    width: 300px;
+}
+
+.product-details-price {
+    font-weight: 800;
+    color: #FD8F5F;
+}
