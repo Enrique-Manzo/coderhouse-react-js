@@ -1,4 +1,5 @@
 import "./PromoBanner.css";
+import { Link } from "react-router-dom";
 
 export default function PromoBanner ({title, description, ctaText}) {
     return (
@@ -11,7 +12,9 @@ export default function PromoBanner ({title, description, ctaText}) {
             <div className="banner-description">
                 <h2>{title}</h2>
                 <p className="banner-text">{description}</p>
+                <Link to="/category/Lights">
                 <p className="banner-cta">{ctaText}</p>
+                </Link>
             </div>
         </div>
         </>

@@ -1,6 +1,8 @@
 import ItemListContainer from "./ItemListContainer";
 import HomepageSlider from "./HomepageSlider";
 import PromoBanner from "./PromoBanner";
+import CategoryBanners from "./CategoryBanners";
+import CategoryFilterContainer from "./CategoryFilterContainer";
 
 export default function Home () {
     return (
@@ -25,9 +27,11 @@ export default function Home () {
                 position: 200
             }
         ]}/>
-        <ItemListContainer preTitle="New winter season items" title="most popular" start={0} end={4}/>
+        <ItemListContainer preTitle="New winter season items" title="most popular" start={13} end={17}/>
+        <CategoryBanners />
         <ItemListContainer preTitle="Trending items in Argentina" title="trending" start={4} end={12} filter={0}/>
         <PromoBanner title={"Discover your Lights | New Collection"} description={"Dive deep into our latest collection of lights and lamps of all sorts and sizes"} ctaText={"Discover Lights"}/>
+        <CategoryFilterContainer />
         </>
     )
 }

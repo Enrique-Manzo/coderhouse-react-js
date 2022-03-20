@@ -116,4 +116,40 @@ export const products = [
         imageURL: require("../Assets/Product-images/porto-chair.jpg"),
         description: "This patio chair has all the classic and elegant design elements that the Lehigh Collection is known for. Its charming design and finishes add sophistication and style to any outdoor space. With a contoured seat and a classically designed back, you will enjoy spending time in the garden with family and friends."
     },
+    {
+        id: 14, 
+        title: "Stylish Clock", 
+        category: "Decoration", 
+        stock: 4, 
+        price: 21.00, 
+        imageURL: require("../Assets/Product-images/yamazaki-wood-faced-wall-clock-z.jpg"),
+        description: "This round clock is crafted of solid wood with an open face, large black hands, and a mix of Roman and Arabic numerals. The weathered look makes it a great addition to any home’s rustic farmhouse décor. Wood clocks are natural products that have many variations in grain, color and finish. Each clock has its own unique appearance with handcrafted characteristics that may vary slightly."
+    },
+    {
+        id: 15, 
+        title: "Kitchen Lights", 
+        category: "Lights", 
+        stock: 7, 
+        price: 91.00, 
+        imageURL: require("../Assets/Product-images/sculptural-glass-7-light-globe-chandelier-metallic-ombre-o.jpg"),
+        description: "Simple linear chandelier, especially designed to illuminate the heart of your bedroom, dining room or industrial styled places. Crafted of metal in a rusty black finish, this hanging light features 3 bowl-shaped clear glass shades dropping from a triangle base with 2 sloping chains and 1 curved rod. The pendant lighting for kitchen island package includes all the necessary assembling and installation parts along with clearly marked cords."
+    },
+    {
+        id: 16, 
+        title: "Reclaimed Wood Bed", 
+        category: "Bedroom", 
+        stock: 10, 
+        price: 1294.00, 
+        imageURL: require("../Assets/Product-images/modern-mixed-reclaimed-wood-bed-black-olive-z.jpg"),
+        description: "Update your sleeping ensemble in style with the Amerland Contemporary White Wash Finish Panel Queen Bed, crafted with a unique picture frame design and bun feet. This attractive bed features a paneled headboard accented with antique walnut top trim for an eye-popping look. The industrial chic white wash finish of the bed is accentuated with a grayish-brown tone that lends it a warm, inviting look and feel."
+    },
+    {
+        id: 17, 
+        title: "Planter Bundle", 
+        category: "Decoration", 
+        stock: 12, 
+        price: 54.00, 
+        imageURL: require("../Assets/Product-images/mid-century-planter-bundle-z.jpg"),
+        description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
+    },
 ]

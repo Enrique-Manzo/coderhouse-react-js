@@ -1,0 +1,33 @@
+.banner-items {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+}
+
+.horizontal {
+    width: 100%;
+    margin: 0;
+}
+
+.vertical {
+    width: 100%;
+    margin: 0;
+}
+
+.image-row div {
+    width: 45%;
+}
+
+.image-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.image-row p {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.banner-category-description {
+    font-size: 1.5rem;
+}
