@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/coderhouse-react-js/static/css/main.273ff961.css",
+    "main.css": "/coderhouse-react-js/static/css/main.a2ba9f6b.css",
     "main.js": "/coderhouse-react-js/static/js/main.de342e36.js",
     "static/js/787.46493d11.chunk.js": "/coderhouse-react-js/static/js/787.46493d11.chunk.js",
     "static/media/homepage-slider2.webp": "/coderhouse-react-js/static/media/homepage-slider2.cd7f8271cbe619fa908d.webp",
@@ -12,12 +12,12 @@
     "static/media/standing-lamp.webp": "/coderhouse-react-js/static/media/standing-lamp.bc60d067f947ab2cdc66.webp",
     "static/media/bedside-table.webp": "/coderhouse-react-js/static/media/bedside-table.c2c213db8cfc36374ffc.webp",
     "index.html": "/coderhouse-react-js/index.html",
-    "main.273ff961.css.map": "/coderhouse-react-js/static/css/main.273ff961.css.map",
+    "main.a2ba9f6b.css.map": "/coderhouse-react-js/static/css/main.a2ba9f6b.css.map",
     "main.de342e36.js.map": "/coderhouse-react-js/static/js/main.de342e36.js.map",
     "787.46493d11.chunk.js.map": "/coderhouse-react-js/static/js/787.46493d11.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.273ff961.css",
+    "static/css/main.a2ba9f6b.css",
     "static/js/main.de342e36.js"
   ]
 }
