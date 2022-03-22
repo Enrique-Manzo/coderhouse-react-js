@@ -1,7 +1,37 @@
 import "./ItemDetails.css"
 import ItemCount from "./ItemCount";
+import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import { cartContext, cartList } from "./Contexts/CartContext";
 
-export default function ItemDetails ({title, price, description, image, stock}) {
+export default function ItemDetails ({id, title, price, description, image, stock}) {
+
+    const {addToCart, cartList} = useContext(cartContext);
+
+    const [visibility, setVisibility] = useState(0);
+
+    const onAdd = (value, quantity) => {
+        setVisibility(value)
+
+        for (const product of cartList) {
+            if (product.id == id) {
+                product.quantity += quantity;
+            }
+        }
+
+        cartList.find(object => object.id == id) == undefined &&
+        addToCart({
+            id: id,
+            title: title,
+            price: price,
+            description: description,
+            image: image,
+            stock: stock,
+            quantity: quantity
+        })
+    }
+
+    console.log(cartList)
 
     return (
         <>
@@ -13,7 +43,16 @@ export default function ItemDetails ({title, price, description, image, stock}) 
                 <h2>{title}</h2>
                 <p className="product-details-price">${price}</p>
                 <p>{description}</p>
-                <ItemCount stock={stock}></ItemCount>
+                {
+                    visibility == 0 ? <ItemCount stock={stock} action={onAdd}></ItemCount>
+                    :
+                    <div className="purchase-button-rvld">
+                        <Link to="/cart">
+                        <button>FINISH PURCHASE</button>
+                        </Link>
+                    </div>
+                }
+                
             </div>
         </div>
         

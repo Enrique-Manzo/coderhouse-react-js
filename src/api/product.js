@@ -152,4 +152,121 @@ export const products = [
         imageURL: require("../Assets/Product-images/mid-century-planter-bundle-z.jpg"),
         description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
     },
+    {
+        id: 18, 
+        title: "Blended Pillow", 
+        category: "Bedroom", 
+        stock: 31, 
+        price: 12.00, 
+        imageURL: require("../Assets/Product-images/blended-down-pillow-insert-c.jpg"),
+        description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
+    },
+    {
+        id: 19, 
+        title: "Bedside Lamp", 
+        category: "Bedroom", 
+        stock: 9, 
+        price: 24.00, 
+        imageURL: require("../Assets/Product-images/industrial-outline-table-lamp-c.jpg"),
+        description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
+    },
+    {
+        id: 20, 
+        title: "Classy Armoire", 
+        category: "Bedroom", 
+        stock: 20, 
+        price: 854.00, 
+        imageURL: require("../Assets/Product-images/mid-century-armoire-c.jpg"),
+        description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
+    },
+    {
+        id: 21, 
+        title: "Buffet Console", 
+        category: "Bedroom", 
+        stock: 21, 
+        price: 324.00, 
+        imageURL: require("../Assets/Product-images/mid-century-buffet-console-large-c.jpg"),
+        description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
+    },
+    {
+        id: 22, 
+        title: "Abstract Lines", 
+        category: "Decoration", 
+        stock: 15, 
+        price: 863.00, 
+        imageURL: require("../Assets/Product-images/sacred-lines-wall-art-c.jpg"),
+        description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
+    },
+    {
+        id: 23, 
+        title: "Floor Mirror", 
+        category: "Decoration", 
+        stock: 19, 
+        price: 435.00, 
+        imageURL: require("../Assets/Product-images/metal-frame-74-arched-floor-mirror-z.jpg"),
+        description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
+    },
+    {
+        id: 24, 
+        title: "Wall Rack", 
+        category: "Decoration", 
+        stock: 6, 
+        price: 321.00, 
+        imageURL: require("../Assets/Product-images/mid-century-wall-rack-acorn-z.jpg"),
+        description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
+    },
+    {
+        id: 25, 
+        title: "Pull Rack", 
+        category: "Decoration", 
+        stock: 18, 
+        price: 43.00, 
+        imageURL: require("../Assets/Product-images/hook-me-up-6-pull-rack-z.jpg"),
+        description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
+    },
+    {
+        id: 26, 
+        title: "Shade Lamp", 
+        category: "Lights", 
+        stock: 5, 
+        price: 1854.00, 
+        imageURL: require("../Assets/Product-images/overarching-linen-shade-floor-lamp-z.jpg"),
+        description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
+    },
+    {
+        id: 27, 
+        title: "Caldas Lamp", 
+        category: "Lights", 
+        stock: 31, 
+        price: 584.00, 
+        imageURL: require("../Assets/Product-images/caldas-floor-lamp-z.jpg"),
+        description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
+    },
+    {
+        id: 28, 
+        title: "Overarching Lamp", 
+        category: "Lights", 
+        stock: 17, 
+        price: 998.00, 
+        imageURL: require("../Assets/Product-images/overarching-metal-shade-floor-lamp-z.jpg"),
+        description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
+    },
+    {
+        id: 29, 
+        title: "Tripod Lamp", 
+        category: "Lights", 
+        stock: 18, 
+        price: 721.00, 
+        imageURL: require("../Assets/Product-images/mid-century-tripod-floor-lamp-z.jpg"),
+        description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
+    },
+    {
+        id: 30, 
+        title: "Radial Chandelier", 
+        category: "Lights", 
+        stock: 31, 
+        price: 643.00, 
+        imageURL: require("../Assets/Product-images/curvilinear-mid-century-chandelier-z.jpg"),
+        description: "Attractive accent for home and garden: Planters are versatile and ideal for growing your favorite plants. Use to conceal a planter and grow flowers, vegetables, and other greenery. Perfect for adding a natural touch to a balcony, terrace and other outdoor areas. Planter boxes make a wonderful alternative to traditional flower pots; The natural beauty of the wood complements the greenery in the planter boxes."
+    },
 ]

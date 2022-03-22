@@ -15,3 +15,14 @@
     font-weight: 800;
     color: #FD8F5F;
 }
+
+.purchase-button-rvld {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.purchase-button-rvld button {
+    border: 1px solid gray;
+}

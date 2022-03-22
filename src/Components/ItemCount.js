@@ -2,8 +2,9 @@ import "./ItemCount.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { cartContext } from "./Contexts/CartContext";
 
-export default function ItemCount({stock}) {
+export default function ItemCount({stock, action}) {
 
     const [Count, setCount] = useState(1)
 
@@ -30,7 +31,7 @@ export default function ItemCount({stock}) {
             </div>
             <p className="stock">(Current stock: {stock})</p>
             <div className="purchase-button">
-                <p>add to cart</p>
+                <p onClick={() => {action(1, Count)}}>add to cart</p>
             </div>
         </div>
     )

@@ -7,8 +7,9 @@ const promise = new Promise((resolve, reject) => {
     if (condition) {
         setTimeout( ()=> {
             
+
             resolve(products)
-        }, 10000)
+        }, 3000)
     } else {
         reject("Error 404: no products found")
     }
@@ -16,22 +17,25 @@ const promise = new Promise((resolve, reject) => {
 
 
 export default function ItemList ({start, end, filter}) {
+
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         promise
-        .then(setLoading(false))
-    }, [])
-    
-    console.log(filter)
-    console.log(start)
+        .then((value) => {
+            setLoading(false);
+            return (
+                value
+            )
+        })
+    })
 
     const currentProducts = products.slice(start, end);
 
     return (
         
         <>
-        { loading ? <h1>Cargando</h1>
+        { loading ? <h1>Loading...</h1>
             :
         currentProducts.map(item =><Item key={item.id} productKey={item.id} title={item.title} category={item.category} price={item.price} image={item.imageURL}></Item>)
         }

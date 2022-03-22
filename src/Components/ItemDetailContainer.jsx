@@ -23,9 +23,9 @@ export default function ItemDetailContainer () {
                         price={furnitureProduct.price}
                         image={furnitureProduct.imageURL}
                         stock={furnitureProduct.stock}
-                        description={furnitureProduct.description}
-                        
-                    ></ItemDetails>
+                        description={furnitureProduct.description} 
+                        id={furnitureProduct.id}      
+                    />
                     
                 </div>
             </section>
