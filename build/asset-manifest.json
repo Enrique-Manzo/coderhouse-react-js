@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/coderhouse-react-js/static/css/main.bb5940e3.css",
-    "main.js": "/coderhouse-react-js/static/js/main.1fabce93.js",
+    "main.css": "/coderhouse-react-js/static/css/main.e9b57ff1.css",
+    "main.js": "/coderhouse-react-js/static/js/main.1e9573d1.js",
     "static/js/787.46493d11.chunk.js": "/coderhouse-react-js/static/js/787.46493d11.chunk.js",
     "static/media/outdoor-women-banner.webp": "/coderhouse-react-js/static/media/outdoor-women-banner.f9f880638849e703afec.webp",
     "static/media/promo-image1.jpg": "/coderhouse-react-js/static/media/promo-image1.d30ab02034294b13c898.jpg",
     "static/media/outdoor-vertical-banner.webp": "/coderhouse-react-js/static/media/outdoor-vertical-banner.eba1921056ca0d7fee38.webp",
+    "static/media/Cat-throwing-a-vase.png": "/coderhouse-react-js/static/media/Cat-throwing-a-vase.58bd4922af77263a125f.png",
     "static/media/coastal-outdoor-swivel-chair-1-z.jpg": "/coderhouse-react-js/static/media/coastal-outdoor-swivel-chair-1-z.da7a5fbfde8af503aa5f.jpg",
     "static/media/homepage-slider2.webp": "/coderhouse-react-js/static/media/homepage-slider2.cd7f8271cbe619fa908d.webp",
     "static/media/coastal-outdoor-sofa-76-z.jpg": "/coderhouse-react-js/static/media/coastal-outdoor-sofa-76-z.c6c99b3df998d187af77.jpg",
@@ -41,12 +42,12 @@
     "static/media/standing-lamp.webp": "/coderhouse-react-js/static/media/standing-lamp.bc60d067f947ab2cdc66.webp",
     "static/media/bedside-table.webp": "/coderhouse-react-js/static/media/bedside-table.c2c213db8cfc36374ffc.webp",
     "index.html": "/coderhouse-react-js/index.html",
-    "main.bb5940e3.css.map": "/coderhouse-react-js/static/css/main.bb5940e3.css.map",
-    "main.1fabce93.js.map": "/coderhouse-react-js/static/js/main.1fabce93.js.map",
+    "main.e9b57ff1.css.map": "/coderhouse-react-js/static/css/main.e9b57ff1.css.map",
+    "main.1e9573d1.js.map": "/coderhouse-react-js/static/js/main.1e9573d1.js.map",
     "787.46493d11.chunk.js.map": "/coderhouse-react-js/static/js/787.46493d11.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb5940e3.css",
-    "static/js/main.1fabce93.js"
+    "static/css/main.e9b57ff1.css",
+    "static/js/main.1e9573d1.js"
   ]
 }

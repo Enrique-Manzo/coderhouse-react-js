@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom
 import Home from './Components/Home';
 import Footer from "./Components/Footer";
 import ItemDetailContainer from "./Components/ItemDetailContainer";
+import Cart from "./Components/Cart";
 import CategoryContainer from './Components/CategoryContainer';
 import CartContextProvider from "./Components/Contexts/CartContext";
 
@@ -24,7 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/product/:productID" element={<ItemDetailContainer />} />
         <Route path="/category/:categoryName" element={<CategoryContainer />} />
-        <Route path="/cart"/>
+        <Route path="/cart" element={<Cart />}/>
         <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
       </CartContextProvider>
