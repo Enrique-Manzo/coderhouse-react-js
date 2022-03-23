@@ -59,7 +59,7 @@ export const products = [
         category: "Outdoor", 
         stock: 20, 
         price: 80.00, 
-        imageURL: require("../Assets/Product-images/portside-outdoor-textilene-chaise-lounger-c-shaped-side-ta-z.jpg"),
+        imageURL: require("../Assets/Product-images/portside-outdoor.jpg"),
         description: "The Adjustable folding cot with mattress sturdy lounge chair is designed with 4 positions adjustable locking system, which allows you to adjust it to a comfortable position according to your needs. You can recline or lay flat."
     },
     {
@@ -131,7 +131,7 @@ export const products = [
         category: "Lights", 
         stock: 7, 
         price: 91.00, 
-        imageURL: require("../Assets/Product-images/sculptural-glass-7-light-globe-chandelier-metallic-ombre-o.jpg"),
+        imageURL: require("../Assets/Product-images/sculptural-glass-7.jpg"),
         description: "Simple linear chandelier, especially designed to illuminate the heart of your bedroom, dining room or industrial styled places. Crafted of metal in a rusty black finish, this hanging light features 3 bowl-shaped clear glass shades dropping from a triangle base with 2 sloping chains and 1 curved rod. The pendant lighting for kitchen island package includes all the necessary assembling and installation parts along with clearly marked cords."
     },
     {
