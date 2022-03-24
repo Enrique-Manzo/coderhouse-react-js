@@ -1,13 +1,11 @@
-import "./ItemCount.css";
+import "./CounterControls.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
-import { cartContext } from "./Contexts/CartContext";
-import CounterControls from "./CounterControls";
 
-export default function ItemCount({stock, action}) {
+export default function CounterControls({state, stock}) {
 
-    const [Count, setCount] = useState(1);
+    const [Count, setCount] = useState(state)
 
     const decrease = () => {
         if (Count > 1) {
@@ -24,16 +22,10 @@ export default function ItemCount({stock, action}) {
     };
 
     return (
-        <div className="purchase-options d-flex justify-content-center align-items-center">
             <div className="counter">
                 <div className="decrement" onClick={decrease}><FontAwesomeIcon icon={faMinus} /></div>
                 <div className="selected-qt">{Count}</div>
                 <div className="increment" onClick={increase}><FontAwesomeIcon icon={faPlus} /></div>            
             </div>
-            <p className="stock">(Current stock: {stock})</p>
-            <div className="purchase-button">
-                <p onClick={() => {action(1, Count)}}>add to cart</p>
-            </div>
-        </div>
     )
-};
+}

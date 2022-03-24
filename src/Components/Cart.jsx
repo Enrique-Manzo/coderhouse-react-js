@@ -2,6 +2,7 @@ import "./Cart.css";
 import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cartContext, cartList } from "./Contexts/CartContext";
+import CounterControls from "./CounterControls";
 
 export default function Cart() {
 
@@ -16,6 +17,7 @@ export default function Cart() {
     const remove = (id) => {
         setCartList(cartList.filter(item => item.id != id ))
     }
+    
 
     return (
         <section className="container item-detail-container">
@@ -45,22 +47,23 @@ export default function Cart() {
                     
                     <li className="checkout-li">
                         <div className="checkout-items">
+                            <Link to={`/product/${item.id}`}>
                             <div className="checkout-product-details">
                                 <img className="checkout-image" src={item.image} alt="" />
                                 <p className="checkout-title">{item.title}</p>
                             </div>
-                            
+                            </Link>
                             <div className="checkout-price">
                                 <p>${item.price}</p> 
                             </div>
                             <div>
-                                <p>{item.quantity}</p>
+                                <p>${item.quantity}</p>
                             </div>
                             <div>
-                                <p>${item.quantity * item.price}</p>
+                                <p>${(item.quantity * item.price).toFixed(2)}</p>
                             </div>
                             <div>
-                                <p className="x">X</p>
+                                <p className="x" onClick={()=>remove(item.id)}>X</p>
                             </div>
                         </div> 
                     </li>
@@ -73,7 +76,7 @@ export default function Cart() {
                 </div>
                 <div className="payment-totals">
                     <p>Purchase subtotal</p>
-                    <p>${productTotal}</p>
+                    <p>${productTotal.toFixed(2)}</p>
                 </div>
                 <div className="payment-totals">
                     <p>VAT (27%)</p>

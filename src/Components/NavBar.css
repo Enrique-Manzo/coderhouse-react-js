@@ -41,6 +41,7 @@
 .navbar-nav {
     margin-left: 75px;
     margin-right: 75px;
+    background-color: white;
 }
 
 .navbar-toggler {
@@ -99,6 +100,10 @@ svg {
 .margin-right {
     margin-right: 5px;
     padding: 1px;
+}
+
+nav form {
+    width: 300px;
 }
 
 /*
