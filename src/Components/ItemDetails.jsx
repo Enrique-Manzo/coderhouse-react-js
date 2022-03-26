@@ -1,6 +1,6 @@
 import "./ItemDetails.css"
 import ItemCount from "./ItemCount";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cartContext, cartList } from "./Contexts/CartContext";
 
@@ -12,14 +12,7 @@ export default function ItemDetails ({id, title, price, description, image, stoc
 
     const onAdd = (value, quantity) => {
         setVisibility(value)
-
-        for (const product of cartList) {
-            if (product.id == id) {
-                product.quantity += quantity;
-            }
-        }
-
-        cartList.find(object => object.id == id) == undefined &&
+        
         addToCart({
             id: id,
             title: title,
@@ -28,7 +21,8 @@ export default function ItemDetails ({id, title, price, description, image, stoc
             image: image,
             stock: stock,
             quantity: quantity
-        })
+        }, quantity)
+        
     }
 
     console.log(cartList)
@@ -44,7 +38,7 @@ export default function ItemDetails ({id, title, price, description, image, stoc
                 <p className="product-details-price">${price}</p>
                 <p>{description}</p>
                 {
-                    visibility == 0 ? <ItemCount stock={stock} action={onAdd}></ItemCount>
+                    visibility === 0 ? <ItemCount stock={stock} action={onAdd}></ItemCount>
                     :
                     <>
                     <div className="purchase-button-rvld">

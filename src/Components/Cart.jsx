@@ -3,6 +3,7 @@ import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cartContext, cartList } from "./Contexts/CartContext";
 import CounterControls from "./CounterControls";
+import swal from "sweetalert";
 
 export default function Cart() {
 
@@ -12,7 +13,7 @@ export default function Cart() {
 
     useEffect(() => {        
         setProductTotal(cartList.reduce(function (a,b) { return a + (b.price * b.quantity); }, 0))
-    })
+    }, [cartList])
 
     const remove = (id) => {
         setCartList(cartList.filter(item => item.id != id ))
@@ -57,7 +58,7 @@ export default function Cart() {
                                 <p>${item.price}</p> 
                             </div>
                             <div>
-                                <p>${item.quantity}</p>
+                                <CounterControls state={item.quantity} stock={item.stock} id={item.id} affectCart={true} />
                             </div>
                             <div>
                                 <p>${(item.quantity * item.price).toFixed(2)}</p>

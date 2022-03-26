@@ -2,8 +2,6 @@ import "./ItemCount.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
-import { cartContext } from "./Contexts/CartContext";
-import CounterControls from "./CounterControls";
 
 export default function ItemCount({stock, action}) {
 
@@ -22,7 +20,7 @@ export default function ItemCount({stock, action}) {
         }
         
     };
-
+    
     return (
         <div className="purchase-options d-flex justify-content-center align-items-center">
             <div className="counter">
