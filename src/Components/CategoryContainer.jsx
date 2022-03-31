@@ -4,48 +4,53 @@ import { products } from "../api/product";
 import { useEffect, useState } from "react";
 import Item from "./Item";
 import Spinner from "./Spinner";
-
-
-const promise = new Promise((resolve, reject) => {
-    let condition = true;
-    if (condition) {
-        setTimeout( ()=> {
-            resolve(products)
-        }, 3000)
-    } else {
-        reject("Error 404: no products found")
-    }
-})
+import {getFirestore, getDoc, getDocs, doc, collection, query, where} from "firebase/firestore/lite";
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 export default function CategoryContainer () {
 
     const [loading, setLoading] = useState(true)
 
-    useEffect(() => {
-        promise
-        .then((value) => {
-            setLoading(false);
-            return (
-                value
-            )
-        })
-    })
+    const [firebaseProducts, setFirebaseProducts] = useState({});
 
     const { categoryName } = useParams();
 
-    const findItems = (products) => {
+    useEffect(()=> {
 
-        const productArray = [];
+        const db = getFirestore();
+        
+        const queryCollection = collection(db, "items")
+        const queryFilter = query(queryCollection, where("category", "==", categoryName))
 
-        for (const product of products) {
-            product.category == categoryName && productArray.push(product)
+        loading && setFirebaseProducts({})        
+
+        getDocs(queryFilter)
+        .then(resp => setFirebaseProducts(resp._docs.map(product => ({ id: product.id, ...product.data() }) )))
+        .then(() => setLoading(false))
+        .catch(err => console.log(err))
+
+        console.log(firebaseProducts)
+
+
+    }, [categoryName])
+
+/*     useEffect(()=> {
+        if (loading == false) {
+            const storage = getStorage();
+
+            for (const product of firebaseProducts) {
+
+                getDownloadURL(ref(storage, product.imageURL.replace("gs://e-commerce-home-space.appspot.com/", "")))
+                .then((url) => setFirebaseProducts([...firebaseProducts, {...product, imageURL: url}]))
+                console.log(firebaseProducts)
+            }
+        
+
         }
 
-        return productArray
-    };
 
-    const categoryProducts = findItems(products);
-
+    }, [loading])
+ */
     return (
 <           section className="container item-detail-container">
                 <div className="title-container">
@@ -55,7 +60,8 @@ export default function CategoryContainer () {
                     :
                     <div className="d-flex justify-content-between align-items-center flex-column flex-sm-column flex-md-row flex-lg-row flex-wrap">
     
-                    {categoryProducts.map(item => <Item
+                    {firebaseProducts.map(item => <Item
+                    key={item.id}
                     title={item.title} 
                     category={item.category}
                     price={item.price}

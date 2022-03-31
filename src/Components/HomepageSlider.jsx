@@ -1,5 +1,6 @@
 import "./HomepageSlider.css"
 import { useState } from "react";
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 
 function SliderContainer ({image, title, text, itemPosition}) {  
 
@@ -34,10 +35,10 @@ export default function HomepageSlider ({content}) {
         <>
         <div className="slider">
             <div className="slider-track" style={{"transform": `translateX(${Position}%)`}}>                
-                {content.map(item => <SliderContainer image={item.image} title={item.title} text={item.text} itemPosition={item.position}/>)}
+                {content.map(item => <SliderContainer key={item.key} image={item.image} title={item.title} text={item.text} itemPosition={item.position}/>)}
             </div>
-            <button className="prev" onClick={prev}>{"<"}</button>
-            <button className="next" onClick={next}>{">"}</button>
+            <button className="prev" onClick={prev}><FaAngleLeft /></button>
+            <button className="next" onClick={next}><FaAngleRight /></button>
         </div>
         
         </>

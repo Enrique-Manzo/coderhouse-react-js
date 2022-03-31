@@ -58,7 +58,7 @@ export default function Cart() {
                                 <p>${item.price}</p> 
                             </div>
                             <div>
-                                <CounterControls state={item.quantity} stock={item.stock} id={item.id} affectCart={true} />
+                                <CounterControls state={item.quantity} stock={item.stock} id={item.id} affectCart={true} item={item} />
                             </div>
                             <div>
                                 <p>${(item.quantity * item.price).toFixed(2)}</p>
@@ -92,7 +92,7 @@ export default function Cart() {
         :
         <div className="no-items-yet">
         <img className="cat" src={require("../Assets/Cat-throwing-a-vase.png")} />
-        <h2>Whoops! You haven't added any products to the cart yet.</h2>
+        <h2>Whoops! You haven't added any products to the cart yet. <Link to={"/"}>Check out our products here.</Link></h2>
         </div>
         }
         </section>

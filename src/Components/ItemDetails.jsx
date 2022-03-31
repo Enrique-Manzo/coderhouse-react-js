@@ -25,8 +25,6 @@ export default function ItemDetails ({id, title, price, description, image, stoc
         
     }
 
-    console.log(cartList)
-
     return (
         <>
         <div className="products-container">

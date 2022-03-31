@@ -3,9 +3,8 @@ import { useState, useContext } from "react";
 import { cartContext } from "./Contexts/CartContext";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
-import { products } from "../api/product";
 
-export default function CounterControls({state, stock, id, affectCart}) {
+export default function CounterControls({state, stock, id, affectCart, item}) {
 
     const {addToCart, cartList, removeFromCart, reduceQuantity} = useContext(cartContext);
 
@@ -13,24 +12,21 @@ export default function CounterControls({state, stock, id, affectCart}) {
 
     const decrease = () => {
         if (Count > 1) {
-            setCount(count => count - 1)
+            setCount(count => count - 1);
 
-            const furnitureProduct = products.find(object => object.id == id)
-            reduceQuantity(furnitureProduct, 1)
+            reduceQuantity(item, 1);
             
         } else if (Count == 1 && affectCart) {
-            removeFromCart(id)
+            removeFromCart(id);
         }
         
     };
 
     const increase = () => {
         if (Count < stock) {
-            setCount(count => count + 1)
+            setCount(count => count + 1);
 
-            const furnitureProduct = products.find(object => object.id == id)
-            affectCart && addToCart(furnitureProduct, 1)
-            
+            affectCart && addToCart(item, 1);            
         }
         
     };
