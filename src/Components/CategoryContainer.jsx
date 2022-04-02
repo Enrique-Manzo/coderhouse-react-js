@@ -1,11 +1,9 @@
 import "./CategoryContainer.css";
 import { useParams } from "react-router-dom";
-import { products } from "../api/product";
 import { useEffect, useState } from "react";
 import Item from "./Item";
 import Spinner from "./Spinner";
 import {getFirestore, getDoc, getDocs, doc, collection, query, where} from "firebase/firestore/lite";
-import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 export default function CategoryContainer () {
 
@@ -29,28 +27,9 @@ export default function CategoryContainer () {
         .then(() => setLoading(false))
         .catch(err => console.log(err))
 
-        console.log(firebaseProducts)
-
 
     }, [categoryName])
 
-/*     useEffect(()=> {
-        if (loading == false) {
-            const storage = getStorage();
-
-            for (const product of firebaseProducts) {
-
-                getDownloadURL(ref(storage, product.imageURL.replace("gs://e-commerce-home-space.appspot.com/", "")))
-                .then((url) => setFirebaseProducts([...firebaseProducts, {...product, imageURL: url}]))
-                console.log(firebaseProducts)
-            }
-        
-
-        }
-
-
-    }, [loading])
- */
     return (
 <           section className="container item-detail-container">
                 <div className="title-container">

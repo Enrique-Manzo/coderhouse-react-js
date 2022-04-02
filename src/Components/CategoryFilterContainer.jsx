@@ -1,11 +1,26 @@
 import "./CategoryFilterContainer.css";
-import { products } from "../api/product";
 import Item from "./Item";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import {getFirestore, getDoc, getDocs, doc, collection} from "firebase/firestore/lite";
 
 export default function CategoryFilterContainer () {
 
+    const [products, setProducts] = useState([])
+
     const [currentProducts, setCurrentProducts] = useState(products.slice(13, 16));
+
+    useEffect(()=> {
+
+      const db = getFirestore();
+
+      const queryCollection = collection(db, "items");
+
+      getDocs(queryCollection)
+      .then(resp => setProducts(resp._docs.map(product => ({ id: product.id, ...product.data() }) )))
+      .catch(err => console.log(err))
+
+  }, [])
+
 
     const mostExpensive = () => {
         

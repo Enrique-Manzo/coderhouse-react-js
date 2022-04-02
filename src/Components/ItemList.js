@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Item from "./Item";
-import { products } from "../api/product";
 import Spinner from "./Spinner";
 import {getFirestore, getDoc, getDocs, doc, collection} from "firebase/firestore/lite";
 
