@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/coderhouse-react-js/static/css/main.846b25d4.css",
-    "main.js": "/coderhouse-react-js/static/js/main.ccda950d.js",
+    "main.js": "/coderhouse-react-js/static/js/main.e62fe577.js",
     "static/js/787.46493d11.chunk.js": "/coderhouse-react-js/static/js/787.46493d11.chunk.js",
     "static/media/outdoor-women-banner.webp": "/coderhouse-react-js/static/media/outdoor-women-banner.f9f880638849e703afec.webp",
     "static/media/promo-image1.jpg": "/coderhouse-react-js/static/media/promo-image1.d30ab02034294b13c898.jpg",
@@ -10,11 +10,11 @@
     "static/media/logo.png": "/coderhouse-react-js/static/media/logo.00c640db7da67ca5fda7.png",
     "index.html": "/coderhouse-react-js/index.html",
     "main.846b25d4.css.map": "/coderhouse-react-js/static/css/main.846b25d4.css.map",
-    "main.ccda950d.js.map": "/coderhouse-react-js/static/js/main.ccda950d.js.map",
+    "main.e62fe577.js.map": "/coderhouse-react-js/static/js/main.e62fe577.js.map",
     "787.46493d11.chunk.js.map": "/coderhouse-react-js/static/js/787.46493d11.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.846b25d4.css",
-    "static/js/main.ccda950d.js"
+    "static/js/main.e62fe577.js"
   ]
 }
