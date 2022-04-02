@@ -24,7 +24,6 @@ function CartContextProvider({ children }) {
             setCartList([...cartList, item])
         }
 
-        console.log(item.id)
 
     }
 
@@ -36,7 +35,6 @@ function CartContextProvider({ children }) {
         
         const updatedCart = cartList.map((product) => {
                 if (product.id == item.id) {
-                    console.log(item)
                     return {...product, quantity: product.quantity - quantity}
                 } else {
                     return product                    

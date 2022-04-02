@@ -7,18 +7,13 @@ import swal from "sweetalert";
 
 export default function Cart() {
 
-    const {cartList, setCartList} = useContext(cartContext);
+    const {cartList, setCartList, removeFromCart} = useContext(cartContext);
 
     const [productTotal, setProductTotal] = useState(0);
 
     useEffect(() => {        
         setProductTotal(cartList.reduce(function (a,b) { return a + (b.price * b.quantity); }, 0))
-    }, [cartList])
-
-    const remove = (id) => {
-        setCartList(cartList.filter(item => item.id != id ))
-    }
-    
+    }, [cartList])    
 
     return (
         <section className="container item-detail-container">
@@ -64,7 +59,7 @@ export default function Cart() {
                                 <p>${(item.quantity * item.price).toFixed(2)}</p>
                             </div>
                             <div>
-                                <p className="x" onClick={()=>remove(item.id)}>X</p>
+                                <p className="x" onClick={()=>removeFromCart(item.id)}>X</p>
                             </div>
                         </div> 
                     </li>

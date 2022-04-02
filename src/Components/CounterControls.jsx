@@ -1,5 +1,5 @@
 import "./CounterControls.css";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { cartContext } from "./Contexts/CartContext";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -10,11 +10,18 @@ export default function CounterControls({state, stock, id, affectCart, item}) {
 
     const [Count, setCount] = useState(state)
 
+    useEffect(()=>{
+        setCount(item.quantity)
+        
+        
+    }, [cartList])
+
     const decrease = () => {
         if (Count > 1) {
-            setCount(count => count - 1);
-
+            
             reduceQuantity(item, 1);
+            setCount(count => count = state);
+
             
         } else if (Count == 1 && affectCart) {
             removeFromCart(id);
@@ -24,9 +31,8 @@ export default function CounterControls({state, stock, id, affectCart, item}) {
 
     const increase = () => {
         if (Count < stock) {
-            setCount(count => count + 1);
-
-            affectCart && addToCart(item, 1);            
+            affectCart && addToCart(item, 1);
+            setCount(count => count = state);           
         }
         
     };
