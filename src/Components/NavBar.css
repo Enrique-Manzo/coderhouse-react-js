@@ -104,6 +104,19 @@
 
 nav form {
     width: 300px;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.form-items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 0;
+}
+
+.navbar-collapse {
+    justify-content: space-between;
 }
 
 /*

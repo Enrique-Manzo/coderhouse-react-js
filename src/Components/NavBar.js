@@ -47,38 +47,42 @@ function NavBar({companyLogo, items}) {
                 </span>
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <Link to={items[0].link}>
-                        <p className="nav-link">{items[0].name}</p>
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to={items[1].link}>
-                        <p className="nav-link">{items[1].name}</p>
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to={items[2].link}>
-                        <p className="nav-link">{items[2].name}</p>
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to={items[3].link}>
-                        <p className="nav-link">{items[3].name}</p>
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to={items[4].link}>
-                        <p className="nav-link">{items[4].name}</p>
-                        </Link>
-                    </li>
-                </ul>
-                <form className="form-inline my-2 my-lg-0">
-                    <input className="form-control mr-sm-2" type="search" placeholder="Search products" aria-label="Search" />
-                    <button className="btn btn-outline-success my-2 my-sm-0 margin-right" type="submit">Search</button>
-                </form>
-                <CartWidget />
+                <div>
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <Link to={items[0].link}>
+                            <p className="nav-link">{items[0].name}</p>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to={items[1].link}>
+                            <p className="nav-link">{items[1].name}</p>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to={items[2].link}>
+                            <p className="nav-link">{items[2].name}</p>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to={items[3].link}>
+                            <p className="nav-link">{items[3].name}</p>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to={items[4].link}>
+                            <p className="nav-link">{items[4].name}</p>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className="form-items">
+                    <form className="form-inline my-2 my-lg-0">
+                        <input className="form-control mr-sm-2" type="search" placeholder="Search products" aria-label="Search" />
+                        <button className="btn btn-outline-success my-2 my-sm-0 margin-right" type="submit">Search</button>
+                    </form>
+                    <CartWidget />
+                </div>
             </div>
         </nav>
         

@@ -1,6 +1,8 @@
 .navbar-cart {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 0;
 }
 
 .navbar-cart p {
