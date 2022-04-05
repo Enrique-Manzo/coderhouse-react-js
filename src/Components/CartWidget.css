@@ -1,10 +1,12 @@
 .navbar-cart {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: flex-end;
     margin-right: 0;
 }
 
 .navbar-cart p {
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
 }

@@ -3,6 +3,8 @@ import "./NavBar.css";
 import CartWidget from "./CartWidget";
 import { Link } from 'react-router-dom';
 import {useState, useEffect} from "react";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function NavBar({companyLogo, items}) {
 
@@ -77,11 +79,16 @@ function NavBar({companyLogo, items}) {
                     </ul>
                 </div>
                 <div className="form-items">
-                    <form className="form-inline my-2 my-lg-0">
-                        <input className="form-control mr-sm-2" type="search" placeholder="Search products" aria-label="Search" />
-                        <button className="btn btn-outline-success my-2 my-sm-0 margin-right" type="submit">Search</button>
-                    </form>
+                <Link to="/search-order">
+                    <div className="navbar-search">
+                        <p>Search order</p>
+                        <FontAwesomeIcon style={{"color": "#FD8F5F"}} icon={faMagnifyingGlass} />
+                    </div>
+                </Link>
                     <CartWidget />
+                <div>
+                    <button className="login-btn" type="button">Log In!</button>
+                </div>
                 </div>
             </div>
         </nav>

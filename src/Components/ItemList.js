@@ -22,7 +22,6 @@ export default function ItemList ({start, end, filter}) {
         .then(resp => setFirebaseProducts(resp._docs.map(product => ({ id: product.id, ...product.data() }) )))
         .then(() => setCurrentProducts(firebaseProducts.slice(start, end)))
         .then(()=> setLoading(false))
-        .then(() => console.log(firebaseProducts))
         .catch(err => console.log(err))
 
     }, [])

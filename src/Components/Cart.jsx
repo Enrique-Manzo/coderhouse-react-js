@@ -1,28 +1,30 @@
-import "./Cart.css";
-import { useState, useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { cartContext, cartList } from "./Contexts/CartContext";
+import { useEffect, useState } from "react";
+import { cartContext } from "./Contexts/CartContext";
 import CounterControls from "./CounterControls";
-import swal from "sweetalert";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
 
-export default function Cart() {
 
-    const {cartList, setCartList, removeFromCart} = useContext(cartContext);
+export default function CartProducts () {
+
+    const {cartList, removeFromCart, order, createOrder, processMutate, setProcessed} = useContext(cartContext);
 
     const [productTotal, setProductTotal] = useState(0);
 
+    const clickProcessed = () => {
+        setProcessed(true)
+    }
+
     useEffect(() => {        
+
         setProductTotal(cartList.reduce(function (a,b) { return a + (b.price * b.quantity); }, 0))
-    }, [cartList])    
+
+    }, [cartList])
+
+    
 
     return (
-        <section className="container item-detail-container">
-        <div className="title-container">
-            <p className="pre-title">Thank you for trusting on us</p>
-            <h1 className="section-title">Checkout</h1>
-        </div>
-        {cartList.length > 0 ? 
-            <div>
+        <div>
             <div className="container cart-list-container">
                 <ul className="checkout-items item-titles">
                     <li>
@@ -82,14 +84,12 @@ export default function Cart() {
                     <p>Order total</p>
                     <p>${(productTotal * 1.27).toFixed(2)}</p>
                 </div>
+                <div onClick={clickProcessed}>
+                    <div className="place-order-btn">
+                        <p>Continue to billing</p>
+                    </div>
+                </div>
             </div>
         </div>
-        :
-        <div className="no-items-yet">
-        <img className="cat" src={require("../Assets/Cat-throwing-a-vase.png")} />
-        <h2>Whoops! You haven't added any products to the cart yet. <Link to={"/"}>Check out our products here.</Link></h2>
-        </div>
-        }
-        </section>
     )
 }

@@ -21,6 +21,10 @@ export default function CategoryFilterContainer () {
 
   }, [])
 
+    useEffect(()=>{
+      setCurrentProducts(products.slice(13, 16))
+    }, [products])
+
 
     const mostExpensive = () => {
         
@@ -71,8 +75,9 @@ export default function CategoryFilterContainer () {
             </div>
             <div>
                 <div className="d-flex justify-content-between align-items-center flex-column flex-sm-column flex-md-row flex-lg-row flex-wrap">
-                    { 
-                    currentProducts.map(item =><Item key={item.id} productKey={item.id} title={item.title} category={item.category} price={item.price} image={item.imageURL}></Item>)
+                    {
+                      currentProducts.map(item =><Item key={item.id} productKey={item.id} title={item.title} category={item.category} price={item.price} image={item.imageURL}></Item>)
+                      
                     }
                 </div>
             </div>

@@ -103,3 +103,48 @@
     align-items: center;
 
 }
+
+.place-order-btn p {
+    background-color: #bc1823;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    width: 180px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.order-status {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.order-status-item {
+    padding: 20px 40px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.order-status-item p {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.active-status {
+    background-color: #c8a165;
+}
+
+.active-status p {
+    color: white;
+}
+
+.inactive-status {
+    background-color: white;
+}
+
+.inactive-status p {
+    color: #505050;
+}
