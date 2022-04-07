@@ -1,11 +1,13 @@
 import "./ItemDetailContainer.css";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import ItemDetails from "./ItemDetails";
 import { getFirestore, getDoc, doc, query} from "firebase/firestore/lite";
 import Spinner from "./Spinner";
 
 export default function ItemDetailContainer () {
+
+    const navigate = useNavigate();
 
     const [loading, setLoading] = useState(true)
 
@@ -20,7 +22,10 @@ export default function ItemDetailContainer () {
         const queryDoc = doc(db, "items", productID);
 
         getDoc(queryDoc)
-        .then(resp => setProduct( {id: resp.id, ...resp.data()} ))
+        .then(resp => {
+            setProduct( {id: resp.id, ...resp.data()} )
+            resp.data() == undefined && navigate("/not-found");
+        })
         .then(() => setLoading(false))
 
     }, [productID])

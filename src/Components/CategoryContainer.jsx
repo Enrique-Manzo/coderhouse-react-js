@@ -1,11 +1,13 @@
 import "./CategoryContainer.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Item from "./Item";
 import Spinner from "./Spinner";
 import {getFirestore, getDoc, getDocs, doc, collection, query, where} from "firebase/firestore/lite";
 
 export default function CategoryContainer () {
+
+    const navigate = useNavigate();
 
     const [loading, setLoading] = useState(true)
 
@@ -23,10 +25,12 @@ export default function CategoryContainer () {
         loading && setFirebaseProducts({})        
 
         getDocs(queryFilter)
-        .then(resp => setFirebaseProducts(resp._docs.map(product => ({ id: product.id, ...product.data() }) )))
+        .then(resp => {
+            setFirebaseProducts(resp._docs.map(product => ({ id: product.id, ...product.data() }) ));
+            resp._docs.length == 0 && navigate("/not-found");  
+        })
         .then(() => setLoading(false))
         .catch(err => console.log(err))
-
 
     }, [categoryName])
 

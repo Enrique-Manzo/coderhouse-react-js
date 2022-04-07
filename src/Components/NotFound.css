@@ -1,0 +1,11 @@
+.not-found-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.not-found-image img {
+    width: 30%;
+}
