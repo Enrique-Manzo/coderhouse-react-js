@@ -15,21 +15,21 @@ export default function Home () {
             {
                 title: "Autumn / Winter Collection",
                 text: "With the approach of cooler months on the not so distant horizon, we’re thrilled to introduce the Autumn/Winter 2015 collection; a firecracker of energy and warmth to liven up those dreary months with sparkle, sizzle and sensuousness. Integrating the new designs into the Adventurer, Metro and Age of Elegance room themes, an array of new innovations continue to expand on our core values of authentic materials and craft.",
-                image: "https://res.cloudinary.com/dovuoehfu/image/upload/v1648918269/homepage-slider1_m6tcgi.webp",
+                image: require("../Assets/millennial-one.jpg"),
                 position: 0,
                 key: 1
             },
             {
-                title: "Quality Products",
+                title: "Durable, party-resistant furniture",
                 text: "Choose from a range of durable and functional doors in several finishes. Whether you’re looking for traditional cottage-style doors or a more contemporary look, we have something for everyone. ",
-                image: "https://res.cloudinary.com/dovuoehfu/image/upload/v1648918270/homepage-slider3_g10q9v.jpg",
+                image: require("../Assets/millennial-two.jpg"),
                 position: 100,
                 key: 2
             },
             {
-                title: "Cottage Rose",
-                text: "There’s the romantic “Cottage Rose” print, placed on Altai wool and cashmere, perfect for upholstery or curtains. “Essential Check,” meanwhile, is meant for the most luxurious of throws and pillows.",
-                image: "https://res.cloudinary.com/dovuoehfu/image/upload/v1648918270/homepage-slider2_fckik1.webp",
+                title: "Minimalist Modern Space",
+                text: "One brand, many companies, and many, many people – that’s us in a nutshell. Spread all over the world, we have a passion for home furnishing and an inspiring shared vision: to create a better everyday life for the many people. This, together with our straightforward business idea, shared values, and a culture based on the spirit of togetherness, guides us in everything we do.",
+                image: "https://res.cloudinary.com/dovuoehfu/image/upload/v1648918269/homepage-slider1_m6tcgi.webp",
                 position: 200,
                 key: 3
             }

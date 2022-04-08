@@ -1,7 +1,7 @@
 import "./bootstrap.min.css";
 import "./NavBar.css";
 import CartWidget from "./CartWidget";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import {useState, useEffect} from "react";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -34,13 +34,14 @@ function NavBar({companyLogo, items}) {
 
     }, [])
     
-
     
     return (
         <nav className="navbar navbar-expand-md" style={{"height": `${Height}px`}}>
-            
-            <img className="logo-image" src={companyLogo} style={{"top": `${Top}px`, "width": `${LogoWidth}%`}}/>
-           
+            <div style={{"width": `${LogoWidth}%`}}>
+                <Link to="/">
+                    <img className="logo-image" src={companyLogo} style={{"top": `${Top}px`}}/>
+                </Link>
+            </div>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon">
                     <div className="navbar-toggler-icon-bar"></div>
@@ -52,29 +53,44 @@ function NavBar({companyLogo, items}) {
                 <div>
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link to={items[0].link}>
+                            <NavLink 
+                                to={items[0].link}
+                                className={({ isActive }) => (isActive && "active-section")}
+                            >
                             <p className="nav-link">{items[0].name}</p>
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link to={items[1].link}>
+                            <NavLink 
+                                    to={items[1].link}
+                                    className={({ isActive }) => (isActive && "active-section")}
+                            >
                             <p className="nav-link">{items[1].name}</p>
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link to={items[2].link}>
+                            <NavLink
+                                to={items[2].link}
+                                className={({ isActive }) => (isActive && "active-section")}
+                            >
                             <p className="nav-link">{items[2].name}</p>
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link to={items[3].link}>
+                            <NavLink 
+                                to={items[3].link}
+                                className={({ isActive }) => (isActive && "active-section")}
+                            >
                             <p className="nav-link">{items[3].name}</p>
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link to={items[4].link}>
+                            <NavLink 
+                                to={items[4].link}
+                                className={({ isActive }) => (isActive && "active-section")}
+                            >
                             <p className="nav-link">{items[4].name}</p>
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

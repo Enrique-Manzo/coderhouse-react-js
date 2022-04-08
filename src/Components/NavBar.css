@@ -31,7 +31,7 @@
 }
 
 .logo-image {
-    width: 10%;
+    width: 100%;
     position: relative;
     border-radius: 10px;
     top: 40px;
@@ -131,4 +131,9 @@ nav form {
     text-transform: none;
     border: 1px solid gray;
     margin-left: 20px;
+}
+.active-section p {
+    border-radius: 3px;
+    color: white;
+    background-color: #c8a165;
 }
