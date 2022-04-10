@@ -1,7 +1,7 @@
 import logo from './Assets/logo.png';
 import './App.css';
 import NavBar from './Components/NavBar';
-import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, Navigate, HashRouter} from "react-router-dom";
 import Home from './Components/Home';
 import Footer from "./Components/Footer";
 import NotFound from './Components/NotFound';
@@ -27,12 +27,13 @@ function App() {
       <ScrollToTop>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/coderhouse-react-js" element={<Home />} />
         <Route path="/not-found" element={<NotFound />} />
         <Route path="/product/:productID" element={<ItemDetailContainer />} />
         <Route path="/category/:categoryName" element={<CategoryContainer />} />
         <Route path="/cart" element={<Cart />}/>
         <Route path="/search-order" element={<OrderSearch />} />
-        <Route path="/*" element={<Navigate to="/not-found" />} />
+        <Route path="/*" element={<NotFound />} />
         <Route element={<Home />} />
       </Routes>
       </ScrollToTop>

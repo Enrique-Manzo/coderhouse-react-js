@@ -27,7 +27,7 @@ export default function CategoryContainer () {
         getDocs(queryFilter)
         .then(resp => {
             setFirebaseProducts(resp._docs.map(product => ({ id: product.id, ...product.data() }) ));
-            resp._docs.length == 0 && navigate("/not-found");  
+            resp._docs.length == 0 && navigate("/not-found");
         })
         .then(() => setLoading(false))
         .catch(err => console.log(err))
