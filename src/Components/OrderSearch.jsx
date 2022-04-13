@@ -1,7 +1,7 @@
 import "./OrderSearch.css";
 import Spinner from "./Spinner";
-import {getFirestore, getDoc, getDocs, doc, collection, query, where, documentId} from "firebase/firestore/lite";
-import { useEffect, useState } from "react";
+import {getFirestore, getDoc, doc } from "firebase/firestore/lite";
+import { useState } from "react";
 
 export default function OrderSearch () {
 
@@ -43,7 +43,7 @@ export default function OrderSearch () {
                 </div>
             </div>
             {
-                Object.keys(orderResult).length == 0 ?
+                Object.keys(orderResult).length === 0 ?
                     loading && <Spinner></Spinner>
                 :
             <div className="d-flex align-items-center justify-content-center">

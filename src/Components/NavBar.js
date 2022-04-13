@@ -2,11 +2,22 @@ import "./bootstrap.min.css";
 import "./NavBar.css";
 import CartWidget from "./CartWidget";
 import { Link, NavLink } from 'react-router-dom';
-import {useState, useEffect} from "react";
+import {useState, useEffect, useContext} from "react";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { cartContext } from "./Contexts/CartContext";
+import { auth } from "../Config/Config";
+import { signOut } from "firebase/auth";
 
 function NavBar({companyLogo, items}) {
+
+    const {user, loggedIn, setUser, setLoggedIn} = useContext(cartContext);
+    
+    const logOut = async () => {
+        await signOut(auth);
+        setUser({user: {email: ""}});
+        setLoggedIn(false);
+    }
 
     let [Height, setHeight] = useState(100);
     let [Top, setTop] = useState(40)
@@ -103,7 +114,22 @@ function NavBar({companyLogo, items}) {
                 </Link>
                     <CartWidget />
                 <div>
-                    <button className="login-btn" type="button">Log In!</button>
+                    {
+                    loggedIn ?
+                    <div className="logged-in-user-nav">
+                    <p>
+                        {user.user.email}
+                    </p>
+                    <p onClick={logOut} className="log-out-button">
+                        Log out
+                    </p>
+                    </div>
+                    :
+                    <NavLink to="/log-in">
+                        <button className="login-btn" type="button">Log In!</button>
+                    </NavLink>
+                    
+                    }
                 </div>
                 </div>
             </div>

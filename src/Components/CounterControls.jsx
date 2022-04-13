@@ -23,7 +23,7 @@ export default function CounterControls({state, stock, id, affectCart, item}) {
             setCount(count => count = state);
 
             
-        } else if (Count == 1 && affectCart) {
+        } else if (Count === 1 && affectCart) {
             removeFromCart(id);
         }
         

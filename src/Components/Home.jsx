@@ -3,10 +3,6 @@ import HomepageSlider from "./HomepageSlider";
 import PromoBanner from "./PromoBanner";
 import CategoryBanners from "./CategoryBanners";
 import CategoryFilterContainer from "./CategoryFilterContainer";
-import { createContext } from "react";
-
-
-const contextApp = createContext("cart");
 
 export default function Home () {
     return (

@@ -1,10 +1,12 @@
 import logo from './Assets/logo.png';
 import './App.css';
 import NavBar from './Components/NavBar';
-import {BrowserRouter as Router, Routes, Route, Navigate, HashRouter} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from './Components/Home';
 import Footer from "./Components/Footer";
 import NotFound from './Components/NotFound';
+import LogIn from './Components/LogIn';
+import Register from './Components/Register';
 import ItemDetailContainer from "./Components/ItemDetailContainer";
 import Cart from "./Components/CartContainer";
 import OrderSearch from './Components/OrderSearch';
@@ -29,6 +31,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/coderhouse-react-js" element={<Home />} />
         <Route path="/not-found" element={<NotFound />} />
+        <Route path="/log-in" element={<LogIn />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/product/:productID" element={<ItemDetailContainer />} />
         <Route path="/category/:categoryName" element={<CategoryContainer />} />
         <Route path="/cart" element={<Cart />}/>

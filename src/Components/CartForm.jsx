@@ -3,14 +3,21 @@ import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { cartContext } from "./Contexts/CartContext";
 import { Link } from "react-router-dom";
-
+import { auth } from "../Config/Config";
+import { signOut } from "firebase/auth";
 
 export default function CartForm () {
 
-    const {cartList, setCartList, createOrder, order, showOrderDetails, setShowOrderDetails} = useContext(cartContext);
+    const {cartList, setCartList, createOrder, order, showOrderDetails, setShowOrderDetails, loggedIn, user, setLoggedIn, setUser} = useContext(cartContext);
     
     const [sameEmail, setSameEmail] = useState(true)
     const [formErrorMessageID, setFormErrorMessageID] = useState()
+
+    const logOut = async () => {
+        await signOut(auth);
+        setUser({user: {email: ""}});
+        setLoggedIn(false);
+    }
 
     useEffect(()=>{
         window.scroll(0,0)
@@ -20,38 +27,55 @@ export default function CartForm () {
 
     const logOrder = () => {
 
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const emailConfirm = document.getElementById("email-confirm").value;
-        const phone = document.getElementById("phone").value;
-
-        if (email != emailConfirm) {
-            setSameEmail(false);
-        } else if (name.length == 0) {
-            setFormErrorMessageID(1)
-            
-        } else if (email.length == 0) {
-            setFormErrorMessageID(2)
-            
-        } else if (emailConfirm.length == 0) {
-            setFormErrorMessageID(3)
-            
-        } else if (phone.length == 0) {
-            setFormErrorMessageID(4)
-            
-        } else {
+        if (loggedIn) {
 
             const productTotal = cartList.reduce(function (a,b) { return a + (b.price * b.quantity); }, 0);
 
             createOrder(
-                name,
-                phone,
-                email,
+                "",
+                "",
+                user.user.email,
                 productTotal*1.27,
                 cartList)
             
             setShowOrderDetails(true)
-            
+
+        } else {
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const emailConfirm = document.getElementById("email-confirm").value;
+            const phone = document.getElementById("phone").value;
+
+            if (email !== emailConfirm) {
+                setSameEmail(false);
+            } else if (name.length === 0) {
+                setFormErrorMessageID(1)
+                
+            } else if (email.length === 0) {
+                setFormErrorMessageID(2)
+                
+            } else if (emailConfirm.length === 0) {
+                setFormErrorMessageID(3)
+                
+            } else if (phone.length === 0) {
+                setFormErrorMessageID(4)
+                
+            } else {
+
+                const productTotal = cartList.reduce(function (a,b) { return a + (b.price * b.quantity); }, 0);
+
+                createOrder(
+                    name,
+                    phone,
+                    email,
+                    productTotal*1.27,
+                    cartList)
+                
+                setShowOrderDetails(true)
+                
+            }
+
         }
         
     }
@@ -80,30 +104,38 @@ export default function CartForm () {
                 </Link>
             </div>
             :
+            loggedIn ?
+            <div className="cart-form-items">
+                <p>You are placing an order as <span className="register-link">{user.user.email}</span></p>
+                <p>If this is not you, <span className="logout-cart-form" onClick={logOut}>click here to log out</span></p>
+                <button onClick={logOrder} type="button">Place purchase order</button>
+            </div>
+            :
             <form className="cart-form-items" action="">
                 <div className="cart-form-item">
                     <label htmlFor="">Full name</label>
-                    {formErrorMessageID == 1 && <p className="form-error-message">This field is required</p>}
+                    {formErrorMessageID === 1 && <p className="form-error-message">This field is required</p>}
                     <input id="name" type="text" required />
                 </div>
                 <div className="cart-form-item">
                     <label htmlFor="">Email address</label>
-                    {formErrorMessageID == 2 && <p className="form-error-message">This field is required</p>}
+                    {formErrorMessageID === 2 && <p className="form-error-message">This field is required</p>}
                     <input id="email" type="text" required />
                 </div>
                 <div className="cart-form-item">
                     <label htmlFor="">Confirm email address</label>
-                    {sameEmail == false && <p className="form-error-message">The email addresses do not match</p>}
-                    {formErrorMessageID == 3 && <p className="form-error-message">This field is required</p>}
+                    {sameEmail === false && <p className="form-error-message">The email addresses do not match</p>}
+                    {formErrorMessageID === 3 && <p className="form-error-message">This field is required</p>}
                     <input id="email-confirm" type="text" required />
                 </div>
                 <div className="cart-form-item">
                     <label htmlFor="">Phone number</label>
-                    {formErrorMessageID == 4 && <p className="form-error-message">This field is required</p>}
+                    {formErrorMessageID === 4 && <p className="form-error-message">This field is required</p>}
                     <input id="phone" type="text" required />
                 </div>
                 <button onClick={logOrder} type="button">Place purchase order</button>
-            </form>            
+            </form>   
+         
             }
         </div>
     )

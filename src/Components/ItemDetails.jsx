@@ -1,12 +1,12 @@
 import "./ItemDetails.css"
 import ItemCount from "./ItemCount";
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { cartContext, cartList } from "./Contexts/CartContext";
+import { cartContext } from "./Contexts/CartContext";
 
 export default function ItemDetails ({id, title, price, description, image, stock, category}) {
 
-    const {addToCart, cartList} = useContext(cartContext);
+    const { addToCart } = useContext(cartContext);
 
     const [visibility, setVisibility] = useState(0);
 

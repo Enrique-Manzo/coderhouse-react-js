@@ -2,7 +2,7 @@ import "./ItemDetailContainer.css";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import ItemDetails from "./ItemDetails";
-import { getFirestore, getDoc, doc, query} from "firebase/firestore/lite";
+import { getFirestore, getDoc, doc } from "firebase/firestore/lite";
 import Spinner from "./Spinner";
 
 export default function ItemDetailContainer () {
@@ -24,7 +24,7 @@ export default function ItemDetailContainer () {
         getDoc(queryDoc)
         .then(resp => {
             setProduct( {id: resp.id, ...resp.data()} )
-            resp.data() == undefined && navigate("/not-found");
+            resp.data() === undefined && navigate("/not-found");
         })
         .then(() => setLoading(false))
 

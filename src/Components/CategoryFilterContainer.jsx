@@ -1,7 +1,7 @@
 import "./CategoryFilterContainer.css";
 import Item from "./Item";
 import { useState, useEffect } from "react";
-import {getFirestore, getDoc, getDocs, doc, collection} from "firebase/firestore/lite";
+import {getFirestore, getDocs, collection} from "firebase/firestore/lite";
 
 export default function CategoryFilterContainer () {
 

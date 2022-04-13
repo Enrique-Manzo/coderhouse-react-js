@@ -26,11 +26,11 @@ Displays items by category, which is retrieved using the useParams() hook.
 
 Displays the number of items added to the cart.
 
-# Cart
+## Cart
 
 Displays a breakdown of the items added to the cart, the final price and taxes, and a series of component that allow the user to make a purchase. If no items have been added to the cart, a message showing that the cart is empty will appear.
 
-# Order search
+## Order search
 
 Uses the order ID to retrive the order and display anonymized information about the order.
 

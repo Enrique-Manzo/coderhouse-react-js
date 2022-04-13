@@ -32,11 +32,11 @@ export default function HomepageSlider ({content}) {
     let [Position, setPosition] = useState(0)
 
     const prev = () => {
-        Position == 0 ? (setPosition(position => position = 0)) : setPosition(position => position + 100)
+        Position === 0 ? (setPosition(position => position = 0)) : setPosition(position => position + 100)
     }
 
     const next = () => {
-        Position == -200 ? (setPosition(position => position = 0)) : setPosition(position => position - 100)
+        Position === -200 ? (setPosition(position => position = 0)) : setPosition(position => position - 100)
     }
     
 

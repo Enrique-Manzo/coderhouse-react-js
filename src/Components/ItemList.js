@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Item from "./Item";
 import Spinner from "./Spinner";
-import {getFirestore, getDoc, getDocs, doc, collection} from "firebase/firestore/lite";
+import {getFirestore, getDocs, collection} from "firebase/firestore/lite";
 
 
 export default function ItemList ({start, end, filter}) {

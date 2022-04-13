@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Item from "./Item";
 import Spinner from "./Spinner";
-import {getFirestore, getDoc, getDocs, doc, collection, query, where} from "firebase/firestore/lite";
+import {getFirestore, getDocs, collection, query, where} from "firebase/firestore/lite";
 
 export default function CategoryContainer () {
 
@@ -27,7 +27,7 @@ export default function CategoryContainer () {
         getDocs(queryFilter)
         .then(resp => {
             setFirebaseProducts(resp._docs.map(product => ({ id: product.id, ...product.data() }) ));
-            resp._docs.length == 0 && navigate("/not-found");
+            resp._docs.length === 0 && navigate("/not-found");
         })
         .then(() => setLoading(false))
         .catch(err => console.log(err))
@@ -35,7 +35,7 @@ export default function CategoryContainer () {
     }, [categoryName])
 
     return (
-<           section className="container item-detail-container">
+            <section className="container item-detail-container">
                 <div className="title-container">
                     <p className="pre-title">{categoryName}</p>
                     <h1 className="section-title">Product Category</h1>

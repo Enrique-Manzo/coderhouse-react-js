@@ -8,9 +8,9 @@ export default function Footer() {
                     <p className="footer-title">contact us</p>
                     <div>
                         <ul>
-                            <li>Address: <span>THIS IS THE ADDRESS</span></li>
-                            <li>Phone: <span>THIS IS THE PHONE</span></li>
-                            <li>Email: <span>THIS IS THE EMAIL</span></li>
+                            <li>Address: <span>Budapest, Kossuth Lajos tér 1-3, 1055 Hungary</span></li>
+                            <li>Phone: <span>+36 1 463 9100</span></li>
+                            <li>Email: <span>style@modern-space.com</span></li>
                         </ul>
                     </div>
                 </div>

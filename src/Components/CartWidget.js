@@ -7,7 +7,7 @@ import { useContext, useEffect, useState } from "react";
 
 export default function CartWidget () {
 
-    const {cartList, setCartList} = useContext(cartContext);
+    const { cartList } = useContext(cartContext);
 
     const [cartCount, setCartCount] = useState(0);
 

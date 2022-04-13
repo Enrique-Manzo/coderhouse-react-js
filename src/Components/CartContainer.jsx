@@ -1,14 +1,13 @@
 import "./CartContainer.css";
 import CartProducts from "./Cart";
 import CartForm from "./CartForm";
-import { useState, useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cartContext } from "./Contexts/CartContext";
-import swal from "sweetalert";
 
 export default function Cart() {
 
-    const {cartList, processed, processMutate, setProcessed} = useContext(cartContext);
+    const {cartList, processed, setProcessed} = useContext(cartContext);
 
     useEffect(()=>{
         setProcessed(false)

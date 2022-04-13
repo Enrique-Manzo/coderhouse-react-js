@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function CartProducts () {
 
-    const {cartList, removeFromCart, order, createOrder, processMutate, setProcessed} = useContext(cartContext);
+    const {cartList, removeFromCart, setProcessed} = useContext(cartContext);
 
     const [productTotal, setProductTotal] = useState(0);
 

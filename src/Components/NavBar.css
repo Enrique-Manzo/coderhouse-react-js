@@ -137,3 +137,12 @@ nav form {
     color: white;
     background-color: #c8a165;
 }
+
+.logged-in-user-nav {
+    padding-left: 10px;
+}
+
+.log-out-button {
+    color: #012333;
+    font-weight: 800;
+}

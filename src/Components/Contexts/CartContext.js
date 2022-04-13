@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState} from "react";
+import { createContext, useState} from "react";
 import { getFirestore, collection, addDoc } from "firebase/firestore/lite";
 
 export const cartContext = createContext([]);
@@ -13,13 +13,17 @@ function CartContextProvider({ children }) {
 
     const [showOrderDetails, setShowOrderDetails] = useState(false)
 
+    const [user, setUser] = useState({});
+
+    const [loggedIn, setLoggedIn] = useState(false);
+
     const addToCart = (item, quantity) => {
         
-        const itemInCart = cartList.some((product) => product.id == item.id);
+        const itemInCart = cartList.some((product) => product.id === item.id);
 
         if (itemInCart) {
             const updatedCart = cartList.map((product) => {
-                if (product.id == item.id) {
+                if (product.id === item.id) {
                     return {...product, quantity: quantity + product.quantity}
                 } else {
                     return product                    
@@ -33,13 +37,13 @@ function CartContextProvider({ children }) {
     }
 
     const removeFromCart = (id) => {
-        setCartList(cartList.filter(item => item.id != id ))
+        setCartList(cartList.filter(item => item.id !== id ))
     }
 
     const reduceQuantity = (item, quantity) => {
         
         const updatedCart = cartList.map((product) => {
-                if (product.id == item.id) {
+                if (product.id === item.id) {
                     return {...product, quantity: product.quantity - quantity}
                 } else {
                     return product                    
@@ -92,10 +96,11 @@ function CartContextProvider({ children }) {
         setProcessed(!processed)
     }
 
+    
+
     return (
         <cartContext.Provider value={{
             cartList,
-            setCartList,
             addToCart,
             setCartList,
             removeFromCart,
@@ -106,7 +111,11 @@ function CartContextProvider({ children }) {
             setProcessed,
             processMutate,
             showOrderDetails,
-            setShowOrderDetails
+            setShowOrderDetails,
+            user,
+            setUser,
+            loggedIn,
+            setLoggedIn,
         }}>
             { children }
         </cartContext.Provider>
