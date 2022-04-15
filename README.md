@@ -41,3 +41,7 @@ Displays a 404 page when reaching an invalid category or product page.
 ## Item details
 
 Displays the requested item, including an image, title, description, and a counter widget.
+
+# Account management
+
+Users can create their account by registering with the app or using their Gmail account. Their email address and the option to log out will be displayed on the navigation bar when logged in. They will also see a confirmation screen before submitting the order showing their personal information.
