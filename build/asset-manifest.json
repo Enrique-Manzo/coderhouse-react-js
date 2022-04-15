@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/coderhouse-react-js/static/css/main.f29a3d14.css",
-    "main.js": "/coderhouse-react-js/static/js/main.c0222513.js",
-    "static/js/787.46493d11.chunk.js": "/coderhouse-react-js/static/js/787.46493d11.chunk.js",
-    "static/media/outdoor-women-banner.webp": "/coderhouse-react-js/static/media/outdoor-women-banner.f9f880638849e703afec.webp",
-    "static/media/promo-image1.jpg": "/coderhouse-react-js/static/media/promo-image1.d30ab02034294b13c898.jpg",
-    "static/media/outdoor-vertical-banner.webp": "/coderhouse-react-js/static/media/outdoor-vertical-banner.eba1921056ca0d7fee38.webp",
-    "static/media/Cat-throwing-a-vase.png": "/coderhouse-react-js/static/media/Cat-throwing-a-vase.58bd4922af77263a125f.png",
-    "static/media/millennial-one.jpg": "/coderhouse-react-js/static/media/millennial-one.fe890ec4fbf9e2943947.jpg",
-    "static/media/404-lost-dog.png": "/coderhouse-react-js/static/media/404-lost-dog.e08d8c038f409a7c9c52.png",
-    "static/media/millennial-two.jpg": "/coderhouse-react-js/static/media/millennial-two.4cfca07e83f0cdc65324.jpg",
-    "static/media/logo.png": "/coderhouse-react-js/static/media/logo.00c640db7da67ca5fda7.png",
-    "index.html": "/coderhouse-react-js/index.html",
-    "main.f29a3d14.css.map": "/coderhouse-react-js/static/css/main.f29a3d14.css.map",
-    "main.c0222513.js.map": "/coderhouse-react-js/static/js/main.c0222513.js.map",
-    "787.46493d11.chunk.js.map": "/coderhouse-react-js/static/js/787.46493d11.chunk.js.map"
+    "main.css": "/static/css/main.98c4aa48.css",
+    "main.js": "/static/js/main.c4520812.js",
+    "static/js/787.46493d11.chunk.js": "/static/js/787.46493d11.chunk.js",
+    "static/media/outdoor-women-banner.webp": "/static/media/outdoor-women-banner.f9f880638849e703afec.webp",
+    "static/media/promo-image1.jpg": "/static/media/promo-image1.d30ab02034294b13c898.jpg",
+    "static/media/outdoor-vertical-banner.webp": "/static/media/outdoor-vertical-banner.eba1921056ca0d7fee38.webp",
+    "static/media/Cat-throwing-a-vase.png": "/static/media/Cat-throwing-a-vase.58bd4922af77263a125f.png",
+    "static/media/millennial-one.jpg": "/static/media/millennial-one.fe890ec4fbf9e2943947.jpg",
+    "static/media/404-lost-dog.png": "/static/media/404-lost-dog.e08d8c038f409a7c9c52.png",
+    "static/media/millennial-two.jpg": "/static/media/millennial-two.4cfca07e83f0cdc65324.jpg",
+    "static/media/logo.png": "/static/media/logo.00c640db7da67ca5fda7.png",
+    "index.html": "/index.html",
+    "main.98c4aa48.css.map": "/static/css/main.98c4aa48.css.map",
+    "main.c4520812.js.map": "/static/js/main.c4520812.js.map",
+    "787.46493d11.chunk.js.map": "/static/js/787.46493d11.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f29a3d14.css",
-    "static/js/main.c0222513.js"
+    "static/css/main.98c4aa48.css",
+    "static/js/main.c4520812.js"
   ]
 }

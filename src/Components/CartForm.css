@@ -58,3 +58,16 @@
     text-decoration:underline;
     cursor: pointer;
 }
+
+.profile-pic {
+    border-radius: 50%;
+}
+
+.account-details {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.account-details-personal p {
+    margin: 0 0 0 10px; 
+}

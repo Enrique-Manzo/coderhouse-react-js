@@ -1,6 +1,6 @@
 import "./LogIn.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../Config/Config";
+import { auth, signInWithGoogle } from "../Config/Config";
 import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { cartContext } from "./Contexts/CartContext";
@@ -29,6 +29,28 @@ export default function LogIn () {
         }
       };
 
+    const googleSignIn = () => {
+        signInWithGoogle()
+        .then((result) => {
+        const picture = result.user.photoURL;
+        const name = result.user.displayName;
+        const email = result.user.email;
+    
+        const user = {
+            user: {
+            email: email,
+            name: name,
+            picture: picture,
+            }
+        };
+
+        setUser(user);
+        setLoggedIn(true);
+        navigate("/");
+        })
+        .catch((error) => console.log(error))
+    }
+
     return (
         <div className="container login-form-container">
             <div className="login-message">
@@ -36,6 +58,7 @@ export default function LogIn () {
                 <p>Sign in to continue to your account</p>
             </div>
             <div className="login-form-form">
+                <button onClick={googleSignIn} type="button" className="login-with-google-btn">Log in with Google</button>
                 <form className="d-flex flex-column cart-form-item" action="">
                     <input placeholder="Email address" type="text" onChange={(event) => setLoginEmail(event.target.value)} />
                     <input placeholder="Password" type="password" onChange={(event) => setLoginPassword(event.target.value)} />

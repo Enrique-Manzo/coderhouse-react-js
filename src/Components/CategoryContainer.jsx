@@ -41,7 +41,7 @@ export default function CategoryContainer () {
                     <h1 className="section-title">Product Category</h1>
                     { loading ? <Spinner></Spinner>
                     :
-                    <div className="d-flex justify-content-between align-items-center flex-column flex-sm-column flex-md-row flex-lg-row flex-wrap">
+                    <div className="items-arrangement flex-column flex-sm-column flex-md-row flex-lg-row flex-wrap">
     
                     {firebaseProducts.map(item => <Item
                     key={item.id}

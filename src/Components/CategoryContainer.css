@@ -37,3 +37,12 @@
     top: 50%;
     background: #505050;
 }
+
+.items-arrangement {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}

@@ -32,7 +32,7 @@ export default function CartForm () {
             const productTotal = cartList.reduce(function (a,b) { return a + (b.price * b.quantity); }, 0);
 
             createOrder(
-                "",
+                `${user.user.name ? user.user.name : ""}`,
                 "",
                 user.user.email,
                 productTotal*1.27,
@@ -75,16 +75,13 @@ export default function CartForm () {
                 setShowOrderDetails(true)
                 
             }
-
         }
-        
     }
 
     const resetOrder = () => {
         setShowOrderDetails(false)
-        setCartList([])
+        setCartList([]);
     }
-
 
     return (
         <div className="container cart-form-container">
@@ -105,9 +102,26 @@ export default function CartForm () {
             </div>
             :
             loggedIn ?
-            <div className="cart-form-items">
-                <p>You are placing an order as <span className="register-link">{user.user.email}</span></p>
-                <p>If this is not you, <span className="logout-cart-form" onClick={logOut}>click here to log out</span></p>
+            <div className="cart-form-items"> 
+                    {
+                        user.user.name ?
+                        <div className="account-details">
+                            <p>You are placing an order as:</p>
+                            <div className="d-flex flex-row justify-content-center align-items-center">
+                                <img className="profile-pic" src={user.user.picture} alt="" />
+                                <div className="d-flex flex-column account-details-personal">
+                                    <p>{user.user.name}</p>
+                                    <p>{user.user.email}</p>
+                                </div>
+                            </div>
+                            <p>If this is not you, <span className="logout-cart-form" onClick={logOut}>click here to log out</span></p>
+                        </div>
+                        :
+                        <div>
+                            <p>You are placing an order as <span className="register-link">{user.user.email}</span></p>
+                            <p>If this is not you, <span className="logout-cart-form" onClick={logOut}>click here to log out</span></p>
+                        </div>
+                    }
                 <button onClick={logOrder} type="button">Place purchase order</button>
             </div>
             :
