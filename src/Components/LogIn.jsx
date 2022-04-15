@@ -4,6 +4,7 @@ import { auth, signInWithGoogle } from "../Config/Config";
 import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { cartContext } from "./Contexts/CartContext";
+import swal from "sweetalert";
 
 export default function LogIn () {
 
@@ -25,7 +26,9 @@ export default function LogIn () {
           setLoggedIn(true);
           navigate("/");
         } catch (error) {
-          console.log(error.message);
+            const errorMessage = error.message
+            console.log(errorMessage);
+            swal(errorMessage, "", "error")
         }
       };
 
